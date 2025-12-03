@@ -77,10 +77,10 @@ ESP32
 │   ├── FileS.cpp
 │   ├── main.cpp
 │   ├── oled.cpp
-│   ├── README.md
 │   ├── scan.cpp
 │   └── ws_server.cpp
-└── platformio.ini
+├── platformio.ini
+└── README.md
 
 ````
 
@@ -159,11 +159,11 @@ Shows congestion and interference.
 
 ### Dashboard
 
-![Dashboard](../images/index.png)
+![Dashboard](images/index.png)
 
 ### Documentation Page
 
-![Docs](../images/doc.png)
+![Docs](images/doc.png)
 
 ---
 
