@@ -1,0 +1,22 @@
+# Build output
+.pio/
+.build/
+cmake-build-*/
+
+# Python venv
+venv/
+.env/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets.h
+*.key
+*.pem
+

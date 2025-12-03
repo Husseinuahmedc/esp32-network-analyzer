@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Network Analyzer – Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .doc-section h3 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+    .doc-section p {
+      margin: 6px 0 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .doc-section ul {
+      margin: 0 0 10px 18px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .doc-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid #ccc;
+      font-size: 12px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .doc-badge-link {
+      text-decoration: none;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: #e9edf2;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Network Analyzer – Documentation</h1>
+      <a href="/" class="doc-badge-link">← Back to Dashboard</a>
+    </div>
+
+    <section class="section doc-section">
+      <h2>1. RSSI (Signal Strength)</h2>
+      <p>
+        <strong>RSSI</strong> stands for <em>Received Signal Strength Indicator</em>.
+        It is measured in <strong>dBm</strong> (decibel-milliwatts) and is always a negative value.
+      </p>
+      <ul>
+        <li><strong>-30 to -50 dBm</strong> → Very strong signal (excellent quality).</li>
+        <li><strong>-50 to -70 dBm</strong> → Good signal (stable connection in most cases).</li>
+        <li><strong>-70 to -85 dBm</strong> → Weak signal (possible drops, low throughput).</li>
+        <li><strong>&lt; -85 dBm</strong> → Very weak (connection is unreliable).</li>
+      </ul>
+      <p>
+        In the dashboard, higher bars (less negative values) mean a better, more reliable Wi-Fi connection.
+      </p>
+    </section>
+
+    <section class="section doc-section">
+      <h2>2. Channel</h2>
+      <p>
+        Each Wi-Fi network operates on a specific <strong>channel</strong>.
+        On 2.4 GHz, channels are typically from <strong>1 to 13</strong>.
+      </p>
+      <ul>
+        <li>Networks on the <strong>same channel</strong> interfere with each other.</li>
+        <li>Overlapping channels (for example 1, 6, 11) can still impact performance.</li>
+        <li>Choosing a <strong>less crowded</strong> channel usually improves stability and speed.</li>
+      </ul>
+      <p>
+        The “All Networks” table shows the channel of each detected network, which helps identify congestion.
+      </p>
+    </section>
+
+    <section class="section doc-section">
+      <h2>3. Security / Authentication Types</h2>
+      <p>Security type describes how traffic between device and access point is encrypted.</p>
+      <p>Common values returned by the ESP32 in this project:</p>
+      <div>
+        <span class="doc-tag">Open</span>
+        <span class="doc-tag">WEP</span>
+        <span class="doc-tag">WPA</span>
+        <span class="doc-tag">WPA2</span>
+        <span class="doc-tag">WPA3</span>
+        <span class="doc-tag">WPA/WPA2</span>
+        <span class="doc-tag">WPA2/WPA3</span>
+      </div>
+      <ul>
+        <li><strong>Open</strong>: No encryption. Anyone can connect and sniff traffic. Not recommended.</li>
+        <li><strong>WEP</strong>: Very old and insecure. Can be cracked in minutes.</li>
+        <li><strong>WPA</strong>: First generation Wi-Fi Protected Access, more secure than WEP but outdated.</li>
+        <li><strong>WPA2</strong>: Standard for many years. Still widely used and generally secure.</li>
+        <li><strong>WPA3</strong>: Newer standard, stronger protection and better resistance to attacks.</li>
+        <li><strong>WPA/WPA2</strong> or <strong>WPA2/WPA3</strong>: Mixed mode to support old and new devices.</li>
+      </ul>
+      <p>
+        In the table, the <strong>Auth</strong> column shows which security type is used by each network.
+      </p>
+    </section>
+
+    <section class="section doc-section">
+      <h2>4. How to Read the Dashboard</h2>
+      <h3>Top Networks (RSSI) Chart</h3>
+      <ul>
+        <li>Shows up to the <strong>top 10 networks</strong> sorted by RSSI (strongest first).</li>
+        <li>The X-axis: SSID (network name). Hidden networks appear as “(hidden)”.</li>
+        <li>The Y-axis: RSSI in dBm (higher bar → stronger signal).</li>
+      </ul>
+
+      <h3>All Networks Table</h3>
+      <ul>
+        <li><strong>SSID</strong>: Network name broadcasted by the access point.</li>
+        <li><strong>RSSI (dBm)</strong>: Signal strength at the ESP32 location.</li>
+        <li><strong>Channel</strong>: Radio channel used by the network.</li>
+        <li><strong>Auth</strong>: Security/encryption type as described above.</li>
+      </ul>
+
+      <p>
+        Together, the chart and the table help you quickly evaluate:
+      </p>
+      <ul>
+        <li>Which networks have the strongest signal.</li>
+        <li>Which channels are crowded and may cause interference.</li>
+        <li>Which networks are using weak or outdated security.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
+

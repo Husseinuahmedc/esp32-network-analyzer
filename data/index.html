@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Network Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Network Analyzer</h1>
+      <div class="card-header-actions">
+        <a href="doc.html" class="badge">Docs</a>
+        <span class="badge" id="ws-status">● Connecting…</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>Top Networks (RSSI)</h2>
+      <canvas id="rssiChart"></canvas>
+    </section>
+
+    <section class="section">
+      <h2>All Networks</h2>
+      <table class="net-table">
+        <thead>
+          <tr>
+            <th>SSID</th>
+            <th>RSSI (dBm)</th>
+            <th>Channel</th>
+            <th>Auth</th>
+          </tr>
+        </thead>
+        <tbody id="networks-body">
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
