@@ -1,14 +1,14 @@
 ```md
-# ESP32 Network Analyzer Tool  
+#ESP32 Network Analyzer Tool  
 Advanced Wi-Fi Scanning, Visualization & Security Insight
 
 This project delivers a practical Network Analyzer built on ESP32, providing real-time scanning of nearby Wi-Fi networks, extracting key metadata (RSSI, Channels, Security Type), and streaming the results into a live web dashboard with charts and structured documentation.
 
 ---
 
-## 🔧 Core Features
+##Core Features
 
-### Real-Time Wi-Fi Scanning
+###Real-Time Wi-Fi Scanning
 - SSID  
 - BSSID (MAC Address)  
 - RSSI (Signal Strength)  
@@ -27,14 +27,14 @@ This project delivers a practical Network Analyzer built on ESP32, providing rea
 - Dynamic table  
 - Responsive UI (HTML + CSS + JavaScript)
 
-### Documentation Page
+###Documentation Page
 - Security definitions  
 - Channel theory  
 - Explanation of dashboard charts  
 
 ---
 
-## 🧩 System Architecture
+##System Architecture
 
 ```
 
@@ -55,7 +55,7 @@ ESP32
 
 ---
 
-## 📂 Project Structure
+##Project Structure
 
 ```
 
@@ -86,7 +86,7 @@ ESP32
 
 ---
 
-## 🚀 Getting Started
+##Getting Started
 
 ### Requirements
 - ESP32 Board  
@@ -116,7 +116,7 @@ http://<ESP32-IP>/doc.html
 
 ---
 
-## 📊 Dashboard Insights
+##Dashboard Insights
 
 ### RSSI Chart
 
